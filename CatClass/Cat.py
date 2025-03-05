@@ -28,15 +28,8 @@ class Cat:
     def meow(self):
         print(f"{self.name} says: Meow!")
         try:
-            wave_obj = sa.WaveObject.from_wave_file("/Users/ensar/IdeaProjects/sounds/cat.wav")
+            wave_obj = sa.WaveObject.from_wave_file("/Users/ensar/IdeaProjects/sounds/cat2.wav")
             play_obj = wave_obj.play()
             play_obj.wait_done()
         except Exception as e:
             print(f"Error playing sound: {e}")
-    def meow2(self):
-        print(f"{self.name} says: Meow!")
-    try:
-        sound = AudioSegment.ffmpeg("/Users/ensar/IdeaProjects/sounds/cat-meow.mp3")
-        play(sound)
-    except Exception as e:
-        print(f"Error playing sound: {e}")
